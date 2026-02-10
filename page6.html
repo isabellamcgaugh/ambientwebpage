@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambient Bokeh Field</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0c141d;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .bokeh-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .dot {
+            position: absolute;
+            border-radius: 50%;
+            mix-blend-mode: screen; 
+            animation: drift 25s infinite linear;
+        }
+
+        .dot:nth-child(1) { width: 300px; height: 300px; background: #ff9a9e; left: 10%; top: 20%; filter: blur(40px); opacity: 0.4; animation-duration: 30s; }
+        .dot:nth-child(2) { width: 400px; height: 400px; background: #a1887f; left: 60%; top: 10%; filter: blur(60px); opacity: 0.3; animation-duration: 40s; animation-delay: -5s; }
+        .dot:nth-child(3) { width: 250px; height: 250px; background: #fad0c4; left: 30%; top: 60%; filter: blur(30px); opacity: 0.5; animation-duration: 25s; animation-delay: -2s; }
+        .dot:nth-child(4) { width: 500px; height: 500px; background: #4facfe; left: -10%; top: 50%; filter: blur(80px); opacity: 0.2; animation-duration: 50s; }
+        .dot:nth-child(5) { width: 350px; height: 350px; background: #00f2fe; right: 10%; bottom: 10%; filter: blur(50px); opacity: 0.3; animation-duration: 35s; animation-delay: -10s; }
+        .dot:nth-child(6) { width: 200px; height: 200px; background: #7028e4; left: 50%; top: 40%; filter: blur(20px); opacity: 0.4; animation-duration: 20s; }
+
+        @keyframes drift {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            33% {
+                transform: translate(100px, 50px) rotate(120deg);
+            }
+            66% {
+                transform: translate(-50px, 100px) rotate(240deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        body {
+        margin: 0;
+        padding-top: 60px; 
+    }
+
+    header {
+        position: fixed; 
+        top: 0;
+        width: 100%;
+        background-color: #ddd; 
+        padding: 15px;
+        text-align: center;
+    }
+
+    a {
+        margin: 0 20px; 
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+    }
+
+    </style>
+</head>
+<body>
+ <header>
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
+        <a href="page4.html">Page 4</a>
+        <a href="page5.html">Page 5</a>
+        <a href="page6.html">Page 6</a>
+    </header>
+
+    <div class="bokeh-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+</body>
+</html>

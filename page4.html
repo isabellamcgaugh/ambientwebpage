@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambient Tunnel - Exercise</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #050505;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .tunnel-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            perspective: 1000px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ring {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 50%; 
+            opacity: 0;
+            
+            animation: moveTunnel 5s linear infinite;
+        }
+
+        .ring:nth-child(1) { animation-delay: 0s; }
+        .ring:nth-child(2) { animation-delay: 0.5s; }
+        .ring:nth-child(3) { animation-delay: 1.0s; }
+        .ring:nth-child(4) { animation-delay: 1.5s; }
+        .ring:nth-child(5) { animation-delay: 2.0s; }
+        .ring:nth-child(6) { animation-delay: 2.5s; }
+        .ring:nth-child(7) { animation-delay: 3.0s; }
+        .ring:nth-child(8) { animation-delay: 3.5s; }
+        .ring:nth-child(9) { animation-delay: 4.0s; }
+        .ring:nth-child(10) { animation-delay: 4.5s; }
+
+        @keyframes moveTunnel {
+            0% {
+                transform: translateZ(-1000px) rotate(0deg) scale(0.1);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateZ(500px) rotate(180deg) scale(4);
+                opacity: 0;
+            }
+        }
+
+        body {
+        margin: 0;
+        padding-top: 60px; 
+    }
+
+    header {
+        position: fixed; 
+        top: 0;
+        width: 100%;
+        background-color: #ddd; 
+        padding: 15px;
+        text-align: center;
+    }
+
+    a {
+        margin: 0 20px; 
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+    }
+
+    </style>
+</head>
+<body>
+ <header>
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
+        <a href="page4.html">Page 4</a>
+        <a href="page5.html">Page 5</a>
+        <a href="page6.html">Page 6</a>
+    </header>
+
+    <div style="height: 1000px; padding: 20px;">
+        
+    </div>
+    <div class="tunnel-container">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+    </div>
+
+</body>
+</html>

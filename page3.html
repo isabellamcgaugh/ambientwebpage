@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    body {
+        margin: 0;
+        padding-top: 60px;
+        background: linear-gradient(black, white);
+        font-family: sans-serif;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ddd;
+        padding: 15px;
+        text-align: center;
+        z-index: 100;
+    }
+
+    a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: black;
+    }
+
+    
+    .container {
+        height: 80vh; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+        background-color: cyan;
+        
+        animation: spin-and-color 4s linear infinite;
+    }
+
+    @keyframes spin-and-color {
+        0% {
+            transform: rotate(0deg);
+            background-color: cyan;
+        }
+        50% {
+            transform: rotate(180deg);
+            background-color: magenta;
+        }
+        100% {
+            transform: rotate(360deg);
+            background-color: cyan;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <header>
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
+        <a href="page4.html">Page 4</a>
+        <a href="page5.html">Page 5</a>
+        <a href="page6.html">Page 6</a>
+    </header>
+
+
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>
